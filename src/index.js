@@ -1,28 +1,9 @@
 import Vue from 'vue';
-import Component from 'vue-class-component';
-import './index.css';
-
-@Component ({})
-class App extends Vue {
-    data(){
-        return {
-            count:0
-        }
-    }
-    created(){
-
-    }
-    render(){
-        return (
-            <div id='app'>
-              hello world
-            </div>
-        )
-    }
-}
-
+import App from './App';
+import {router} from './router';
 new Vue({
     el:'#app',
     components:{App},
-    template:'<App/>'
+    template:'<App/>',
+    router,
 })
