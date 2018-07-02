@@ -23,6 +23,15 @@ export default class App extends Vue {
         this.name = 'vue-class-02'
         this.count = 1
         this.age = 18
+        console.log('store',this.$store)
+    }
+    addCount = () =>{
+        console.log('add +')
+        this.$store.commit('moduleA/addCount')
+    }
+    asynacAddCount = () => {
+        console.log('async add')
+        this.$store.dispatch('moduleA/asyncAddCount')
     }
     render(){
         return (
@@ -33,7 +42,9 @@ export default class App extends Vue {
               {this.name}
               <br/>
               {this.age} */}
-
+              {this.$store.state.moduleA.count}
+              <button onClick={this.addCount}> addCount</button>
+              <button onClick={this.asynacAddCount}> Aysnc AddCount</button>
               <div>
                   <h1>vue-router</h1>
                   <router-link to='/home'>go to home</router-link> <br/>

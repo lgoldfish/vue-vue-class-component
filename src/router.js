@@ -5,7 +5,7 @@ import App from './App';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter)
 const routes = [
-    // {path:'/',component:App},
+    {path:'/',redirect:'/home'},
     {path:'/home',component:Home},
     {path:'/about',component:About}
 ]
