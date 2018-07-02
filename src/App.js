@@ -29,8 +29,9 @@ export default class App extends Vue {
         console.log('add +')
         this.$store.commit('moduleA/addCount')
     }
-    asynacAddCount = () => {
+    asynacAddCount2 = () => {
         console.log('async add')
+        // throw new Error()/
         this.$store.dispatch('moduleA/asyncAddCount')
     }
     render(){

@@ -11,6 +11,8 @@ module.exports = webpackMerge(base, {
         filename: '[name].bundle.js',
         publicPath:"/"
     },
+    devtool:'cheap-module-eval-source-map',
+    // devtool:'source-map',
     devServer: {
         hot: true,
         host: 'localhost',
