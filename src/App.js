@@ -2,8 +2,8 @@ import Vue from 'vue';
 import Component from 'vue-class-component';
 import Home from './routes/Home';
 import About from './routes/About';
-import './index.css';
 
+import './index.css';
 @Component ({
     components:{
         About,
@@ -23,13 +23,12 @@ export default class App extends Vue {
         this.name = 'vue-class-02'
         this.count = 1
         this.age = 18
-        console.log('store',this.$store)
     }
     addCount = () =>{
         console.log('add +')
         this.$store.commit('moduleA/addCount')
     }
-    asynacAddCount2 = () => {
+    asynacAddCount = () => {
         console.log('async add')
         // throw new Error()/
         this.$store.dispatch('moduleA/asyncAddCount')
@@ -50,6 +49,7 @@ export default class App extends Vue {
                   <h1>vue-router</h1>
                   <router-link to='/home'>go to home</router-link> <br/>
                   <router-link to='/about'>go to about</router-link> <br/>
+                  <router-link to = "/template">go to template</router-link>
                   <router-view></router-view>
               </div>
             </div>
