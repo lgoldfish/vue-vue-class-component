@@ -50,7 +50,8 @@ export default class App extends Vue {
                   <router-link to='/home'>go to home</router-link> <br/>
                   <router-link to='/about'>go to about</router-link> <br/>
                   <router-link to = "/template">go to template</router-link>
-                  <router-view></router-view>
+                  <router-link to = "/classvue">go to class vue</router-link>
+                  <router-view ></router-view>
               </div>
             </div>
         )
