@@ -1,7 +1,10 @@
 /* @import "~reset.css"; */
 
-body {
-    color: rebeccapurple;
-    font-size: 30px;
-    font-weight: 700;
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li {
+    width: 50%;
 }

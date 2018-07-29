@@ -1,38 +1,35 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import MyComponent from '../components/MyComponent'
-@Component
-export default class ClassVue  extends Vue{
-    message = "hello i am class vue"
-    count = 0
-    created = ''
-    mounted(){
-        this.created = "加载完成了"
-    }
+import ClassChild from '../components/ClassChild'
+@Component({
+    watch:{
+        count(value){
+            if(value == 10) {
+                alert ('count is 10')
+            }
+        }
+    },
+})
+export default class ClassVue extends Vue {
+    count = 0;
+    fromChild = null;
     addCount(){
         this.count ++ 
     }
-    getFromChild(value) {
-        console.log('from child data',value)
-    }
-    get  filterCount(){
-        if(this.count == 10) {
-            alert(this.count)
-        }
+    get getCount(){
         return this.count * 10
+    }
+    getFromChild(value) {
+        this.fromChild = value
     }
     render(){
         return (
             <div>
-                <h1>{this.created}</h1>
-                <h1>{this.message}</h1>
-                <br/>
-                <h1>count</h1>
-                {this.count}
-                <h1>filterCount</h1>
-                {this.filterCount}
-                <button onClick={this.addCount}>addCoun</button>
-                <MyComponent getFromChild = {this.getFromChild} info={this.count}/>
+            <p>count: {this.count}</p>
+            <p>getCount: {this.getCount}</p>
+            <button onClick={this.addCount}> + </button>
+            <ClassChild fromParent={this.count} getFromChild={this.getFromChild} />
+            <p>{this.fromChild}</p>
             </div>
         )
     }
