@@ -3,10 +3,6 @@ import Component from 'vue-class-component';
 import MyComponent from '../components/MyComponent'
 @Component
 export default class ClassVue  extends Vue{
-    constructor(){
-        super()
-        this.props = 0
-    }
     message = "hello i am class vue"
     count = 0
     created = ''
