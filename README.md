@@ -1,6 +1,5 @@
 ##编前语
-- 修改类的行为
-- 修饰类、修饰类的属性
+- 修饰类的行为、修饰类的属性
 - ES7的一个提案
 - 类的改变在代码编译时发生，不是在运行时
 - babel转码或者使用TypeScript
@@ -29,6 +28,8 @@ npm install  babel-core   babel-plugin-transform-decorators  -D
 - [core-decorators](https://www.npmjs.com/package/core-decorators)
  -- autobind
  -- deprecate
+ -- Override
+ -- Suppvisewarnings
  - [traits-decorator](https://www.npmjs.com/package/traits-decorator)
   -- traits
 

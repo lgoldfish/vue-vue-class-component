@@ -12,7 +12,8 @@ const testfn = (isTrue) =>{
 class A {
 
 }
-console.log(A.isTrue)
+// A = testfn(true)(A) || A
+console.log('a',A.isTrue)
 console.log(A.myfun())
 // -----------------------------
 const testfn2 = (isTrue) => {
